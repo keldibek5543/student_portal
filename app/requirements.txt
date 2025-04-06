@@ -1,6 +1,0 @@
-flask-login
-flask-wtf
-flask-socketio
-flask-sqlalchemy
-eventlet
-gunicorn
