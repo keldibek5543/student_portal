@@ -1,16 +1,22 @@
-{% extends 'index.html' %}
 
-{% block content %}
-<h2>Регистрация</h2>
-<form method="POST">
-    {{ form.hidden_tag() }}
-    <p>{{ form.username.label }}<br>{{ form.username(size=32) }}</p>
-    <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
-    <p>{{ form.password.label }}<br>{{ form.password(size=32) }}</p>
-    <p>{{ form.confirm.label }}<br>{{ form.confirm(size=32) }}</p>
-    <p>{{ form.submit() }}</p>
-</form>
-{% for message in form.errors.values() %}
-    <p style="color: red;">{{ message[0] }}</p>
-{% endfor %}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+    <h2>Регистрация</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.username.label }}<br>{{ form.username(size=32) }}</p>
+        <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
+        <p>{{ form.password.label }}<br>{{ form.password(size=32) }}</p>
+        <p>{{ form.confirm.label }}<br>{{ form.confirm(size=32) }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    {% for message in form.errors.values() %}
+        <p style="color:red">{{ message[0] }}</p>
+    {% endfor %}
+</body>
+</html>
